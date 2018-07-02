@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/XuYanci/GLViewPagerViewController-Swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'XuYanci' => 'grandy.wind@gmail.com' }
-  s.source           = { :git => 'https://github.com/XuYanci/GLViewPagerViewController-Swift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tchopio/GLViewPagerViewController-Swift' }
  
   s.ios.deployment_target = '9.0'
   s.source_files = 'GLViewPagerViewController/Classes/**/*'
