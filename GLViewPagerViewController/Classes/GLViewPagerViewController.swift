@@ -302,7 +302,7 @@ open class GLViewPagerViewController: UIViewController, UIPageViewControllerData
     }
     
     // MARK: - User Events
-    func tapInTabView(tapGR:UIGestureRecognizer) -> Void {
+    @objc func tapInTabView(tapGR:UIGestureRecognizer) -> Void {
         let tabIndex = (tapGR.view?.tag)! - kTabTagBegin
         self ._selectTab(tabIndex: tabIndex, animate: false)
     }
