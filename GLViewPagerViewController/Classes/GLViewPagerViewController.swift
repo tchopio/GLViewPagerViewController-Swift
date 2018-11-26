@@ -476,6 +476,10 @@ open class GLViewPagerViewController: UIViewController, UIPageViewControllerData
         return self.tabViews[index]
     }
     
+    open func selectTab(at index: Int, animated: Bool = false) -> Void {
+        self._selectTab(tabIndex: index, animate: animated)
+    }
+    
     func _selectTab(tabIndex:Int,animate:Bool) -> Void {
         let prevPageIndex:Int = _currentPageIndex
         self._disableViewPagerScroll()
