@@ -476,6 +476,10 @@ open class GLViewPagerViewController: UIViewController, UIPageViewControllerData
         return self.tabViews[index]
     }
     
+    open var selectedTabIndex: Int {
+        return _currentPageIndex
+    }
+    
     open func selectTab(at index: Int, animated: Bool = false) -> Void {
         self._selectTab(tabIndex: index, animate: animated)
     }
