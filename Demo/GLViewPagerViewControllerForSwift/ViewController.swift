@@ -63,7 +63,7 @@ class ViewController: GLViewPagerViewController,GLViewPagerViewControllerDataSou
     self.trailingPadding = 10
     self.defaultDisplayPageIndex = 0
     self.tabAnimationType = GLTabAnimationType.GLTabAnimationType_WhileScrolling
-    self.indicatorColor = UIColor.init(colorLiteralRed: 255.0 / 255.0, green: 205.0 / 255.0, blue: 0.0, alpha: 1.0)
+    self.indicatorColor = UIColor(red: 255.0 / 255.0, green: 205.0 / 255.0, blue: 0.0, alpha: 1.0)
     self.supportArabic = false
     self.fixTabWidth = false
     self.fixIndicatorWidth = true
@@ -108,7 +108,7 @@ class ViewController: GLViewPagerViewController,GLViewPagerViewControllerDataSou
   func viewForTabIndex(_ viewPager: GLViewPagerViewController, index: Int) -> UIView {
     let label:UILabel = UILabel.init()
     label.text = self.tabTitles.object(at: index) as? String
-    label.textColor = UIColor.init(colorLiteralRed: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)
+    label.textColor = UIColor.init(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)
     label.textAlignment = NSTextAlignment.center
     label.transform = CGAffineTransform.init(scaleX: 0.9, y: 0.9)
     return label
@@ -124,8 +124,8 @@ class ViewController: GLViewPagerViewController,GLViewPagerViewControllerDataSou
     let currentLabel:UILabel = viewPager.tabViewAtIndex(index: index) as! UILabel
     prevLabel.transform = CGAffineTransform.identity.scaledBy(x: 0.9, y: 0.9)
     currentLabel.transform = CGAffineTransform.identity.scaledBy(x: 1.0, y: 1.0)
-    prevLabel.textColor = UIColor.init(colorLiteralRed: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)
-    currentLabel.textColor = UIColor.init(colorLiteralRed: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
+    prevLabel.textColor = UIColor.init(red: 0.3, green: 0.3, blue: 0.3, alpha: 1.0)
+    currentLabel.textColor = UIColor.init(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
   }
   
   func willChangeTabToIndex(_ viewPager: GLViewPagerViewController, index: Int, fromTabIndex: Int, progress: CGFloat) {
@@ -137,8 +137,8 @@ class ViewController: GLViewPagerViewController,GLViewPagerViewControllerDataSou
     let currentLabel:UILabel = viewPager.tabViewAtIndex(index: index) as! UILabel
     prevLabel.transform = CGAffineTransform.identity.scaledBy(x: 1.0 - (0.1 * progress), y: 1.0 - (0.1 * progress))
     currentLabel.transform = CGAffineTransform.identity.scaledBy(x: 0.9 + (0.1 * progress), y: 0.9 + (0.1 * progress))
-    currentLabel.textColor =  UIColor.init(colorLiteralRed: Float(0.3 + 0.2 * progress), green: Float(0.3 - 0.3 * progress), blue: Float(0.3 + 0.2 * progress), alpha: 1.0)
-    prevLabel.textColor = UIColor.init(colorLiteralRed: Float(0.5 - 0.2 * progress), green: Float(0.0 + 0.3 * progress), blue: Float(0.5 - 0.2 * progress), alpha: 1.0)
+    currentLabel.textColor =  UIColor.init(red: 0.3 + 0.2 * progress, green: 0.3 - 0.3 * progress, blue: 0.3 + 0.2 * progress, alpha: 1.0)
+    prevLabel.textColor = UIColor.init(red: 0.5 - 0.2 * progress, green: 0.0 + 0.3 * progress, blue: 0.5 - 0.2 * progress, alpha: 1.0)
   }
   
   func widthForTabIndex(_ viewPager: GLViewPagerViewController, index: Int) -> CGFloat {
